@@ -23,6 +23,8 @@ Bundle 'Shougo/vimproc'
 Bundle 'Shougo/unite.vim'
 Bundle 'vim-buffergator'
 Bundle 'Gundo'
+Plugin 'delimitMate.vim'
+Plugin 'artur-shaik/vim-javacomplete2'
 
 " Avoid a name conflict with L9
 call vundle#end()
@@ -89,5 +91,5 @@ nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
 nmap <leader>1 :Gvdiff <cr>
 
-"tagList 
+"tagList
 let Tlist_Use_Right_Window = 1

@@ -1,6 +1,6 @@
 
 set nocompatible 
-filetype off 
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin() 
@@ -29,6 +29,7 @@ Plugin 'artur-shaik/vim-javacomplete2'
 " Avoid a name conflict with L9
 call vundle#end()
 filetype plugin indent on
+filetype plugin on 
 
 "
 " default config
@@ -66,9 +67,10 @@ set noantialias nu
 :let mapleader=","
 
 " insert / normalmode keyboradline 
-:autocmd InsertEnter * set cul 
-:autocmd InsertLeave * set nocul 
-:autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+autocmd InsertEnter * set cul 
+autocmd InsertLeave * set nocul 
+autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " mapping key 
 nnoremap <Tab> :NERDTreeToggle <CR> 
@@ -90,6 +92,17 @@ nmap <leader>bb :CtrlPBuffer<cr>
 nmap <leader>bm :CtrlPMixed<cr>
 nmap <leader>bs :CtrlPMRU<cr>
 nmap <leader>1 :Gvdiff <cr>
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+nmap <F5> <Plug>(JavaComplete-Imports-Add)
+imap <F5> <Plug>(JavaComplete-Imports-Add)
+nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <F7> <Plug>(JavaComplete-Imports-AddMissing)
 
-"tagList
+"tagList 
 let Tlist_Use_Right_Window = 1
+
+
+

@@ -3,8 +3,10 @@ alias ll='ls -alG'
 alias cp='cp -i' 
 alias ls='ls -G'
 alias vim='/usr/local/bin/vim'
-export PS1="\033[0;31m[\u@\H:\W]\$\033[0;37m "
-export PATH="/usr/local/sbin:$PATH"
+export LARAVEL_PATH="/Users/ronkzoo/.composer/vendor/bin/"
+export PATH="/usr/local/sbin:/usr/local/bin:$PATH:$LARAVEL_PATH"
+export BASH_IT_THEME='Powerline'
 
-echo "hello leeminuk"
+
+
 

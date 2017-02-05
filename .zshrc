@@ -55,6 +55,8 @@ plugins=(git)
 
 alias vim='/usr/local/bin/vim'
 alias ctags='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
+alias python=python3
+alias pip=pip3
 export ANDROID_HOME="/usr/local/Cellar/android-sdk/24.4.1_1"
 export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -87,10 +89,21 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 PATH="/usr/local/Cellar/perl/5.24.0_1/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/System/Library/Perl/5.18/${PERL5LIB:+:${PERL5LIB}}:"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/System/Library/Perl/5.18"; export PERL_LOCAL_LIB_ROOT;
+PERL5LIB="/System/Library/Perl/5.18/${PERL5LIB:+:${PERL5LIB}}:/Library/Perl/5.18:"; 
+PERL5LIB="${PERL5LIB}:/System/Library/Perl/Extras/5.18/";export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/System/Library/Perl/5.18:"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"/usr/local/Cellar/perl/5.24.0_1\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/usr/local/Cellar/perl/5.24.0_1"; export PERL_MM_OPT;
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/ronkzoo/Downloads/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/ronkzoo/Downloads/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/ronkzoo/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/ronkzoo/Downloads/google-cloud-sdk/completion.zsh.inc'
+fi
